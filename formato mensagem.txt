@@ -1,0 +1,39 @@
+Formato da mensagem de requisição:
+<nomeMetodo> <argumento1> .... <argumentoN>
+
+criar conta
+  requisição: NEW <senha>
+  resposta: OK conta criada com o numero <numeroConta>, anote esse numero
+
+login
+  requisição: LOG <numeroConta> <senha>
+  resposta sucesso: OK \n Login efetuado com sucesso
+  resposta de erro: ER \n Numero da conta ou senha errados
+
+deposito
+  requisição: DEP <montante>
+  resposta: OK deposito executado
+
+retirada
+  requisição: RET <montante>
+  resposta sucesso: OK \n retirada de <montante> executado com sucesso
+  resposta de erro: ER \n saldo insuficiente
+  
+transferencia
+  requisição: TRA <montante> <numeroContaDestino>
+  resposta sucesso: OK \n <montante> transferido com sucesso para a conta <numeroContaDestino>
+  resposta de erro: 
+    ER \n saldo insuficiente
+    ER \n conta destino inexistente
+
+visualizar saldo
+  requisição: SAL
+  resposta: OK \n <saldo>
+
+extrato
+  requisição: EXT
+  resposta: OK \n <textoExtrato>
+
+encerrar
+  requisição: ENC
+  resposta: OK \n Saiu da conta com sucesso
