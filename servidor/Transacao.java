@@ -11,8 +11,8 @@ import java.util.Date;
 public class Transacao implements Serializable {
   private Date data;
   private String tipo;
-  private double valorTransacao;
-  private double saldo;
+  private long valorTransacao;
+  private long saldo;
   
   /**
    * Único construtor, recebe todos os dados presentes em uma transação, com execeção
@@ -22,7 +22,7 @@ public class Transacao implements Serializable {
    * @param valorTransacao O valor movimentado pela transação
    * @param saldo O saldo após a execução da transação
    */
-  public Transacao(String tipo, double valorTransacao, double saldo) {
+  public Transacao(String tipo, long valorTransacao, long saldo) {
     this.data = new Date();
     this.tipo = tipo;
     this.valorTransacao = valorTransacao;
@@ -45,19 +45,19 @@ public class Transacao implements Serializable {
     this.tipo = tipo;
   }
 
-  public double getValorTransacao() {
+  public long getValorTransacao() {
     return valorTransacao;
   }
 
-  public void setValorTransacao(double valorTransacao) {
+  public void setValorTransacao(long valorTransacao) {
     this.valorTransacao = valorTransacao;
   }
 
-  public double getSaldo() {
+  public long getSaldo() {
     return saldo;
   }
 
-  public void setSaldo(double saldo) {
+  public void setSaldo(long saldo) {
     this.saldo = saldo;
   }  
 }

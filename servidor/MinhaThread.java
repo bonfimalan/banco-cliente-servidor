@@ -58,7 +58,6 @@ public class MinhaThread extends Thread {
       String metodo;
 
       // login
-      // codigo = 6 => encerrar
       do {
         // recebe a string de entrada e separa as palavras em um vetor
         // 0 => codigo, 1 => numero da conta, 2 => senha

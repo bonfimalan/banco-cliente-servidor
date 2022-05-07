@@ -62,10 +62,10 @@ public class Conta implements Serializable {
     if (success) {
       saldo-=quantia;
       adicionarTransacao("Retirada", quantia);
+      Banco.salvarContas();
     }
 
     mutex.release();
-    Banco.salvarContas();
     return success;
   }
 
@@ -90,9 +90,9 @@ public class Conta implements Serializable {
       saldo-=quantia;
       contaDestino.deposito(quantia);
       adicionarTransacao("Transferencia", quantia);
+      Banco.salvarContas();
     }
     mutex.release();
-    Banco.salvarContas();
     return success;
   }
 
